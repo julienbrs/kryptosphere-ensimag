@@ -70,7 +70,7 @@ chain: container
 
 # Start react front serving
 start: container
-	docker exec -dt $(CONTAINER_NAME) bash -c "yarn start > $(HARDHAT_LOGS) 2>&1"
+	docker exec -dt $(CONTAINER_NAME) bash -c "yarn start > $(FRONT_LOGS) 2>&1"
 
 deploy: container
 	docker exec -ti $(CONTAINER_NAME) bash -c "yarn deploy"
