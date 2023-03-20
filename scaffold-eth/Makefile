@@ -1,6 +1,6 @@
 BASE_IMAGE = node:18
 SCAFFOLD_REPO = https://github.com/scaffold-eth/scaffold-eth.git
-SCAFFOLD_DIR = $(PWD)/.scaffold-repo
+SCAFFOLD_DIR = $(PWD)/scaffold-repo
 SCAFFOLD_WORKING_DIR = /opt/scaffold-eth
 CONTAINER_NAME = SCAFFOLD_ETH
 
