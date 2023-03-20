@@ -67,12 +67,9 @@ Metamask est donc un outil indispensable pour tout développeur ou utilisateur d
 
 1. Installez Metamask depuis [ce lien](https://metamask.io/download/) selon votre navigateur
 2. Créez un compte Metamask en choisissant un mot de passe et en sauvegardant votre phrase secrète (seed). Attention : ne perdez pas cette phrase secrète car elle vous permettra de restaurer votre compte si vous changez d’appareil ou si vous perdez vos données.
-3. Ajoutez puis sélectionnez le réseau Goerli (appelez un membre ou bien suivez ce [rapide tuto](https://blog.cryptostars.is/goerli-g%C3%B6rli-testnet-network-to-metamask-and-receiving-test-ethereum-in-less-than-2-min-de13e6fe5677))
-4. Cliquez sur “Ajouter des jetons” puis “Jeton personnalisé” et entrez l’adresse du contrat Token que vous avez déployé en local dans Remix
-Vous devriez voir apparaître votre token dans votre portefeuille Metamask avec sa quantité totale
-Félicitations ! Vous avez ajouté votre token à Metamask ! 🙌
 
-Mais il nous manque encore quelque chose : des Ether (ETH) pour payer les frais de transaction (gas) lors du déploiement ou des appels au smart contract.
+Vous voila presque prêt à interragir avec la blockchain.
+Il nous manque encore une chose : des Ether (ETH) pour payer les frais de transaction (gas) lors du déploiement ou des appels au smart contract.
 
 Pour obtenir des ETH gratuits sur Goerli, demandez à un membre de l'association de vous en envoyer, ou bien recevez en gratuitement via un [faucet](https://goerlifaucet.com/).
 
@@ -100,6 +97,11 @@ Votre contrat est prêt à être déployé !
 Vous avez créé votre propre cryptomonnaie en Solidity ! 🎉
 Mais ce n’est pas fini ! Nous allons maintenant déployer notre smart contract sur un réseau testnet : Goerli.
 
+### Ajouter son token à Metamask
+1. Ajoutez puis sélectionnez le réseau Goerli (appelez un membre ou bien suivez ce [rapide tuto](https://blog.cryptostars.is/goerli-g%C3%B6rli-testnet-network-to-metamask-and-receiving-test-ethereum-in-less-than-2-min-de13e6fe5677))
+2. Cliquez sur “Ajouter des jetons” puis “Jeton personnalisé” et entrez l’adresse du contrat Token que vous avez déployé en local dans Remix
+Vous devriez voir apparaître votre token dans votre portefeuille Metamask avec sa quantité totale
+Félicitations ! Vous avez ajouté votre token à Metamask ! 🙌
 
 ### Pour aller plus loin
 
