@@ -48,8 +48,13 @@ Votre contrat est prêt !
 - Entrez une valeur initiale pour le compteur (par exemple 0) dans le champ “Deploy”, puis cliquez sur "Deploy"
 - Dans l'onglet "Deployed Contracts", cliquez sur le contrat déployé pour appeler les fonctions et consulter la variable count.
 
-#### Metamask
+### Déploiement sur Testnet
+#### Les différents types de blockchains
+Vous venez de déployer votre contract sur Remix VM London. Remix VM London est un environnement de test qui simule une blockchain locale dans votre navigateur. Cela vous permet de tester vos contrats sans utiliser de vraie monnaie ni les exposer à d’autres personnes. Mais si vous voulez que votre contrat soit accessible au public et interagisse avec d’autres applications décentralisées, vous devez le déployer sur une vraie blockchain.
 
+Ethereum est la blockchain la plus utilisée pour les smart contracts. Elle dispose de plusieurs réseaux : le réseau principal (mainnet) et les réseaux de test (testnets). Le mainnet est le réseau officiel où les transactions sont réelles et impliquent l'utilisation de vrais fonds. Les testnets sont des réseaux expérimentaux où les transactions sont gratuites et sans conséquence. Ils servent à tester des applications décentralisées avant de les lancer sur le mainnet. Nous utiliserons le testnet Goerli
+
+#### Metamask
 Pour cela, nous allons utiliser Metamask : une extension pour navigateur qui permet d’interagir avec la blockchain Ethereum.
 
 Metamask est une extension pour navigateur qui permet d’interagir avec la blockchain Ethereum. C’est aussi un portefeuille numérique qui vous permet de gérer vos propres clés privées et publiques. Vos clés privées sont des codes secrets qui vous donnent le contrôle total de vos fonds sur la blockchain. Vos clés publiques sont des adresses qui vous identifient sur la blockchain et qui permettent de recevoir ou d’envoyer des transactions.
@@ -72,7 +77,7 @@ Mais il nous manque encore quelque chose : des Ether (ETH) pour payer les frais 
 Pour obtenir des ETH gratuits sur Goerli, demandez à un membre de l'association de vous en envoyer, ou bien recevez en gratuitement via un [faucet](https://goerlifaucet.com/).
 
 **Déploiement:**
-- Vous pouvez revenir sur Remix. Choisissez maintenant "Injected Web3" pour l'environnement, en vous assurant que le réseau Goerli est bien sélectionné.
+- Vous pouvez revenir sur Remix. Choisissez maintenant "Injected Web3" pour l'environnement, en vous assurant que le réseau Goerli est bien sélectionné dans Metamask.
 - Entrez les mêmes paramètres que pour le déploiement local dans le champ “Deploy”, puis cliquez sur “Deploy”. Vous devriez voir une fenêtre Metamask s’ouvrir pour confirmer la transaction. Cliquez sur “Confirmer” et attendez que la transaction soit validée par le réseau (cela peut prendre quelques minutes).
 - Dans l’onglet “Deployed Contracts”, cliquez sur le contrat déployé pour appeler les fonctions et consulter les variables d’état. Vous pouvez aussi vérifier l’état de votre contrat sur [Etherscan](https://goerli.etherscan.io/), un explorateur de blocs qui permet de visualiser les transactions et les contrats sur la blockchain Ethereum.
 
@@ -80,8 +85,9 @@ Pour obtenir des ETH gratuits sur Goerli, demandez à un membre de l'association
 
 Les cryptomonnaies permettent de réaliser des transactions sécurisées, décentralisées et transparentes sans avoir besoin d’un intermédiaire centralisé. Il existe de nombreuses cryptomonnaies différentes, chacune ayant ses propres caractéristiques et usages.
 
-Nous allons créer notre propre cryptomonnaie (=token) en Solidity. Notre token aura un nom, un symbole, une quantité totale et une fonction de transfert.
+Nous allons créer notre propre cryptomonnaie (=token) en Solidity. Notre token aura un nom, un symbole, une quantité totale et une fonction de transfert. En fait, toutes les propriétés énnoncées précédement sont communes aux tokens. Pour que le votre en soit un, il faut qu'il implémente aussi le standard [ERC20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/).
 
+Les ERCs sont des ressources qui rassemblent les propositions d'amélioration apportées par la communauté. Des ERCs connues sont par exemple l'[ERC20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) pour les tokens, l'[ERC721](https://eips.ethereum.org/EIPS/eip-721) pour les NFT ou l'[ERC1155](https://ethereum.org/fr/developers/docs/standards/tokens/erc-1155/) pour les DAOs (à voir plus tard..).
 
 - Créez un nouveau fichier .sol et déclarez votre nouveau contrat Token
 - Déclarez les variables d’état name (string), symbol (string), totalSupply (uint256).
@@ -93,13 +99,6 @@ Nous allons créer notre propre cryptomonnaie (=token) en Solidity. Notre token 
 Votre contrat est prêt à être déployé ! 
 Vous avez créé votre propre cryptomonnaie en Solidity ! 🎉
 Mais ce n’est pas fini ! Nous allons maintenant déployer notre smart contract sur un réseau testnet : Goerli.
-
-### Déploiement sur Testnet
-#### Les différents types de blockchains
-Jusqu'à présent, vous avez déploye votre contract sur Remix VM London. Remix VM London est un environnement de test qui simule une blockchain locale dans votre navigateur. Cela vous permet de tester vos contrats sans utiliser de vraie monnaie ni les exposer à d’autres personnes. Mais si vous voulez que votre contrat soit accessible au public et interagisse avec d’autres applications décentralisées, vous devez le déployer sur une vraie blockchain.
-
-Ethereum est la blockchain la plus utilisée pour les smart contracts. Elle dispose de plusieurs réseaux : le réseau principal (mainnet) et les réseaux de test (testnets). Le mainnet est le réseau officiel où les transactions sont réelles et impliquent l'utilisation de vrais fonds. Les testnets sont des réseaux expérimentaux où les transactions sont gratuites et sans conséquence. Ils servent à tester des applications décentralisées avant de les lancer sur le mainnet. Nous utiliserons le testnet Goerli
-
 
 
 ### Pour aller plus loin
