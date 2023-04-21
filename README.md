@@ -1,7 +1,7 @@
 # Kryptosphere ENSIMAG
 
 
-### **Le premier workshop c'est par [ici](./workshops/workshop1) !**
+### **Le deuxieme workshop c'est par [ici](./workshops/solidity/workshop2/) !**
 
 -- --
 
