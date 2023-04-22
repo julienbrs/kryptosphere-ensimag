@@ -1,6 +1,8 @@
 # Workshop n°2, Intégration d'un Frontend + Smart Contract
 
-![](https://i.imgur.com/EODjjU5.jpg)
+<p align="center">
+  <img src="assets/dao.avif" alt="DAO Image" width="50%"style="margin-bottom: 20px;"/>
+</p>
 
 Cette semaine nous verrons comment créer une dApp complète. On parle de dApp (decentralized Application) quand on a un smart contract qui est déployé sur la blockchain et un frontend qui permet d'interagir avec ce smart contract. Nous utiliserons le framework [Scaffold-eth](https://github.com/scaffold-eth/scaffold-eth) qui permet de créer une dApp en quelques minutes.
 

@@ -1,9 +1,18 @@
 # Kryptosphere ENSIMAG
 
-
 ### **Le deuxieme workshop c'est par [ici](./workshops/solidity/workshop2/SUJET.md) !**
 
--- --
+_À propos des workshop:_
+
+Ils se composent généralement en 2 parties (2 smarts contracts):
+
+- Le premier est un smart contract simple qui permet de comprendre le but de la séance.
+- Le deuxième est un smart contract plus complexe qui permet de mettre en pratique ses compétences.
+  Il est normal de ne pas forcément réussir à finir le deuxième smart contract en une séance, le principal est de comprendre le but de la séance grâce au premier smart contract.
+
+N'hésitez pas à nous contacter si vous avez des questions ou des remarques via [le discord](https://discord.gg/sekTyRMH5B).
+
+---
 
 ## Prudence !
 
@@ -26,7 +35,7 @@ Ces outils seront utilisés dans des workshops.
 - [Remix: remix.ethereum.org](https://remix.ethereum.org) - Outil de développement solidity et déploiement en ligne
 - [Scaffold-eth: git:scaffold-eth](https://github.com/scaffold-eth/scaffold-eth) - Framework web3 (React + hardhat) - Voir [ici](./scaffold-eth/) pour un quick launch
 
-## Workshops
+## Liste des workshops
 
 - [Workshop 1](./workshops/workshop1/) - Initiation Solidity & Smart Contracts
 - oui c'est un peu vide
