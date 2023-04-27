@@ -24,8 +24,9 @@ Nous vous fournissons ici une liste des noms de domaine dignes de confiance, cel
 - [`*.ethereum.org`](https://ethereum.org/)
 - [`*.soliditylang.org`](https://docs.soliditylang.org/) - Doc solidity
 - [`speedrunethereum.com`](https://speedrunethereum.com/) - Exercices solidity
-- [`goerlifaucet.com`](https://goerlifaucet.com/)
-- [`sepoliafaucet.com`](https://sepoliafaucet.com/)
+- [Lexique des termes du monde crypto](https://journalducoin.com/lexique/) (journal du coin)
+- [`goerlifaucet.com`](https://goerlifaucet.com/) pour récupérer des ethers test sur la blockchain testnet goerli
+- [`sepoliafaucet.com`](https://sepoliafaucet.com/) pour récupérer des ethers test sur la blockchain testnet sepolia
 
 ## Outils web3
 
