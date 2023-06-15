@@ -50,25 +50,104 @@ Ce workshop vise à vous familiariser avec les concepts de StarkNet et Cairo. C'
 
 #### Configuration de l'Environnement de Développement
 
+Contrairement à Solidity où nous avions commencé sur Remix, nous allons ici utiliser VSCode et Scarb pour compiler et déployer nos smart contracts.
+
+#### Installation de Scarb
+
+Scarb est le compilateur et le gestionnaire de paquets pour Cairo, inspiré de Cargo de Rust. Il simplifie la compilation de votre code Cairo et la gestion des dépendances.
+
+**1. Prérequis**:
+
+- Assurez-vous que vous avez bien Git d'installé.
+
+**2. Installation de Scarb**:
+
+- Exécutez la commande suivante dans votre terminal pour installer Scarb:
+  ```
+  curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | sh
+  ```
+- Vérifiez l'installation en exécutant `scarb --version`.
+
+#### Installation de l'Extension VSCode pour Cairo
+
+**1. Extension VSCode**:
+
+- Installez l'extension Cairo pour VSCode depuis le Marketplace de VSCode.
+- Dans les paramètres de l'extension, activez les options 'Enable Language Server' et 'Enable Scarb'.
+
 ---
 
-#### Squelette du Contrat de Compteur
+#### Hello world en Cairo
 
+**1. Création du Répertoire du Projet**:
+
+- Créez un répertoire pour vos projets Cairo:
+  ```
+  mkdir ~/cairo_projects
+  cd ~/cairo_projects
+  ```
+
+**2. Utilisation de Scarb pour Créer un Projet**:
+
+- Dans votre répertoire de projets, exécutez:
+  ```
+  scarb new nom_du_projet
+  ```
+- Ceci crée un nouveau projet nommé `nom_du_projet`.
+
+**3. Structure du Projet**:
+
+- Un projet Scarb typique contient un fichier `Scarb.toml` et un répertoire `src` avec un fichier `lib.cairo` à l'intérieur.
+- Scarb initialise également un dépôt Git avec un fichier `.gitignore`. Vous pouvez supprimer le répertoire `.git` si vous ne souhaitez pas utiliser Git (`rm -rf .git`).
+
+**4. Configuration du Projet**:
+
+- Ouvrez `Scarb.toml` et configurez les détails de votre projet, comme le nom et les dépendances.
+
+---
+
+#### Construire et Exécuter un Projet Scarb
+
+**1. Construction du Projet**:
+
+- Dans le répertoire `nom_du_projet`, exécutez:
+  ```
+  scarb build
+  ```
+- Ceci compile votre projet Cairo.
+
+**2. Exécution du Projet**:
+
+- Pour exécuter le projet, utilisez:
+  ```
+  scarb cairo-run
+  ```
+- Vérifiez la sortie de votre programme Cairo.
+
+**3. Exécution des Tests**:
+
+- Pour exécuter les tests, utilisez:
+  ```
+  scarb test
+  ```
+- Vérifiez la sortie des tests.
+
+---
+
+## Création d'un SC Compteur
+
+Comme pour le workshop 1 de Solidity, nous allons créer un smart contract Compteur pour nous familiariser avec Cairo et sa syntaxe.
+Le squelette du code est disponible [ici](modeles/counter.cairo).
+Pour vous aider, vous pouvez vous référer à la documentation de Cairo [ici](https://book.cairo-lang.org/title-page.html), spécifiquement sur les chapitres 2.1 et 2.2. Nous les survolerons ensemble en début de workshop.
 
 **Étapes à Suivre: **
 
-- Compléter la Déclaration de la Variable de Compteur
-    Ajoutez la déclaration de la variable counter dans la structure Storage.
+- Compléter la Déclaration de la Variable de Compteur: ajoutez la déclaration de la variable counter dans la structure Storage.
 
-- Initialiser la Variable de Compteur
-    Implémentez le constructeur pour initialiser la variable counter avec init_value.
+- Initialiser la Variable de Compteur: implémentez le constructeur pour initialiser la variable counter avec init_value.
 
-- Lire la Valeur du Compteur
-    Complétez la fonction get_current_count pour retourner la valeur actuelle du compteur.
+- Lire la Valeur du Compteur: complétez la fonction get_current_count pour retourner la valeur actuelle du compteur.
 
-- Incrémenter le Compteur
-    Écrivez la logique pour augmenter la valeur du compteur dans la fonction increment.
+- Incrémenter le Compteur: écrivez la logique pour augmenter la valeur du compteur dans la fonction increment.
 
-- Décrémenter le Compteur
-    Développez la fonction decrement pour réduire la valeur du compteur.
-
+- Décrémenter le Compteur: développez la fonction decrement pour réduire la valeur du compteur.
