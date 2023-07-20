@@ -67,7 +67,7 @@ Nous allons maintenant créer un smart contract très simple qui vous permettra 
      ```
 
     - Finissez ce smart-contract. Il doit avoir une variable `secreteValue` de type `uint256` (entier non signé sur 256 bits). Cette variable sera privée, c'est-à-dire que seul le smart contract pourra y accéder.
-   - Ajoutez un constructeur qui initialise la variable `secreteValue` à 0.
+   - Ajoutez un constructeur qui prend en paramètre un `uint256` et qui initialise la variable `secreteValue` avec la valeur passée en paramètre.
    - Ajoutez une fonction `setValue` qui prend en paramètre un `uint256` et qui met à jour la variable `secreteValue` avec la valeur passée en paramètre.
 
 
