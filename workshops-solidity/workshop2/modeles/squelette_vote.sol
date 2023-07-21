@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract SimpleVoting {
+contract Voting {
     struct Poll {
         string question;
         string[] options;
