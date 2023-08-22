@@ -156,14 +156,6 @@ mod SimpleErc20 {
             self.total_supply.write(supply);
             let balance = self.balances.read(recipient) + amount;
             self.balances.write(recipient, amount);
-            self
-                .emit(
-                    Event::Transfer(
-                        Transfer {
-                            from: contract_address_const::<0>(), to: recipient, value: amount
-                        }
-                    )
-                );
         }
     }
 }
