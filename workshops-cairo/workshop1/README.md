@@ -1,5 +1,9 @@
 # Découverte de Cairo1 et Starknet
 
+<p align="center">
+  <img src="../assets/starknet-quantum-leap.jpg" alt="Starknet quantum leap" width="50%"style="margin-bottom: 20px;"/>
+</p>
+
 Premier workshop sur StarkNet et Cairo1. Pour rappel, Starknet est un Layer2 d'Ethereum et Cairo1, son langage de programmation dédié. Conçus pour surmonter les limitations d'Ethereum, Cairo1 permet d'aborder le concept de Zero-Knowledge
 
 ### Starknet
