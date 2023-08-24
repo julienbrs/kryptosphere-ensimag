@@ -1,7 +1,7 @@
 # Workshop n°2, Intégration d'un Frontend + Smart Contract
 
 <p align="center">
-  <img src="assets/dao.avif" alt="DAO Image" width="50%"style="margin-bottom: 20px;"/>
+  <img src="../assets/dao.avif" alt="DAO Image" width="50%"style="margin-bottom: 20px;"/>
 </p>
 
 Cette semaine nous verrons comment créer une dApp complète. On parle de dApp (decentralized Application) quand on a un smart contract qui est déployé sur la blockchain et un frontend qui permet d'interagir avec ce smart contract. Nous utiliserons le framework [Scaffold-eth](https://github.com/scaffold-eth/scaffold-eth) qui permet de créer une dApp en quelques minutes, pour faire un système de vote décentralisé.
@@ -35,7 +35,7 @@ Cette semaine nous verrons comment créer une dApp complète. On parle de dApp (
    - Si vous n'avez pas `yarn` d'installé, vous pouvez l'installer avec `npm install -g yarn`. Vérifiez que `yarn` est bien installé en exécutant `yarn --version`.
 
 Si votre écran ressemble à l'image suivante, c'est que tout s'est bien passé, vous êtes prêts à commencer!
-![](assets/installation.png)
+![](../assets/installation.png)
 
 2. **Présentation de Scaffold-Eth**
 
@@ -81,7 +81,7 @@ Nous allons maintenant créer un smart contract très simple qui vous permettra 
    2. Déploiement du smart contract
       - Dans un autre terminal, exécutez `yarn deploy`. Cela exécutera le script `00_deploy_your_contract.ts` se trouvant dans `packages/hardhat/deploy/` qui déploiera le smart contract sur la blockchain locale.
         Vous devriez voir un message `YourContract deployed at: 0x...` qui indique que le smart contract a bien été déployé à l'addresse `0x...`.
-        ![](assets/local_deploiement.png)
+        ![](../assets/local_deploiement.png)
 
 ---
 
@@ -94,7 +94,7 @@ Il vous suffit de lancer la commande `yarn start` dans un nouveau terminal pour 
 - tester votre smart contract et interagir avec lui sur [cette page](http://localhost:3000/debug). N'oubliez pas de connecter votre Metamask a votre blockchain locale (si ce n'est pas le cas, cliquez sur le bouton en haut à droite "Wrong Network" de votre frontend).
 
 Pour tester votre smart contract, il faudra importer un compte test de votre blockchain locale dans votre Metamask. Allez dans votre tout premier terminal lancé (où votre blockchain tourne), remontez tout en haut et copiez une private key:
-![](assets/private_keys.png)
+![](../assets/private_keys.png)
 
 **⚠️ Warning:** These private keys are for testing purposes only on your local blockchain. Never use them on a real blockchain because anyone can access them and steal your funds.
 
