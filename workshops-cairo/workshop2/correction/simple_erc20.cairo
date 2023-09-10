@@ -36,19 +36,13 @@ mod SimpleErc20 {
         allowances: LegacyMap::<(ContractAddress, ContractAddress), felt252>,
     }
 
-    #[event]
-    #[derive(Drop, starknet::Event)]
-    enum Event {
-        Transfer: Transfer,
-        Approval: Approval,
-    }
-    #[derive(Drop, starknet::Event)]
+    #[derive(Drop)]
     struct Transfer {
         from: ContractAddress,
         to: ContractAddress,
         value: felt252,
     }
-    #[derive(Drop, starknet::Event)]
+    #[derive(Drop)]
     struct Approval {
         owner: ContractAddress,
         spender: ContractAddress,
