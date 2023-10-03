@@ -88,7 +88,7 @@ Les ERCs sont des ressources qui rassemblent les propositions d'amélioration ap
 
 - Créez un nouveau fichier .sol et déclarez votre nouveau contrat Token
 - Déclarez les variables d’état name (string), symbol (string), totalSupply (uint256).
-- De plus, créez un mapping nommé balances, qui associe chaque adresse avec le nombre de jetons qui lui sont associés. Ce mapping nous permettra de suivre la quantité de jetons détenue par chaque adresse.
+- De plus, créez un mapping nommé balanceOf, qui associe chaque adresse avec le nombre de jetons qui lui sont associés. Ce mapping nous permettra de suivre la quantité de jetons détenue par chaque adresse.
 - Déclarez le constructeur de votre contrat si cela vous semble judicieux.
 - Déclarez une fonction publique transfer qui prend deux paramètres : l’adresse du destinataire (_to) et le montant (_value) à transférer. Cette fonction doit vérifier que l’émetteur a suffisamment de tokens dans son solde, déduire le montant de son solde, ajouter le montant au solde du destinataire
 - Faites en sorte que la fonction transfer émette un événement Transfer avec les informations du transfert. ([Rappel Doc Solidity ici](https://docs.soliditylang.org/en/v0.8.19/structure-of-a-contract.html#events))
