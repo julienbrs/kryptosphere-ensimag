@@ -1,6 +1,6 @@
 # Kryptosphere ENSIMAG
 
-### **Le deuxieme workshop c'est par [ici](./workshops/solidity/workshop2/SUJET.md) !**
+### **Le deuxieme workshop c'est par [ici](./workshops-solidity/workshop2) !**
 
 _À propos des workshop:_
 
