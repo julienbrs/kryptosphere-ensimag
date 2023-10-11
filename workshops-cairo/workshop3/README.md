@@ -4,6 +4,14 @@
   <img src="../assets/Cairo-V1.webp" alt="Starknet forest" width="50%"style="margin-bottom: 20px;"/>
 </p>
 
+Ce workshop, contrairement aux précédents, se veut interactif. Il n'y a pas de code à écrire, mais des exercices à résoudre. C'est l'occasion d'approfondir vos connaissances en Cairo1 et de voir des fonctionnalités plus avancées, pour pouvoir ensuite vous lancer dans la création de smart contracts plus complexes pour le prochain workshop.
+
+## Prérequis:
+    - Connaissance de base de la blockchain et des smart contracts.
+    - Compréhension élémentaire du langage Cairo1 (variables, fonctions, types de données).
+    - Environnement de développement avec Cairo1 installé.
+
+
 
 ### Exercice 1: Déclaration et affichage de variable
 
@@ -23,7 +31,7 @@ fn main() {
 
 ### Exercice 2: Utilisation d'Enum
 
-```cairo
+```rust
 #[derive(Copy, Drop)]
 enum Commande {
     // ???
@@ -32,7 +40,7 @@ enum Commande {
 fn main() {
     let mut commandes: Array<Commande> = ArrayTrait::new();
     commandes.append(Commande::Stopper(()));
-    commandes.append(Commande::Crier('Getting Starkpilled'));
+    commandes.append(Commande::Crier("Getting Starkpilled"));
     commandes.append(Commande::Teleporter((20, 40)));
     commandes.append(Commande::Colorier((255, 0, 0)));
 }
@@ -43,7 +51,7 @@ fn main() {
 
 ### Exercice 3: Array
 
-```cairo
+```rust
 use array::ArrayTrait;
 use option::OptionTrait;
 
