@@ -124,7 +124,7 @@ fn test_options() {
 fn option_simple(option_cible: Option<felt252>) {
     // TODO: Utilisez les méthodes `is_some` et `is_none` pour vérifier si `option_cible` contient une valeur.
     // Placez l'assertion et l'instruction d'impression ci-dessous dans les blocs appropriés.
-    assert(option_cible.unwrap() == "Starkpilling" 'err1');
+    assert(option_cible.unwrap() == "Starkpilling", 'err1');
     ("option est vide !").print();
 }
 ```
