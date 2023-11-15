@@ -1,16 +1,14 @@
-pragma solidity ^0.6.12
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/math/SafeMath.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ERC20/SafeERC20.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";
 
 contract LiquidityPool {
-  using SafeMath for uint256;
-  using SafeERC20 for ERC20;
 
   ERC20 public eth;
   ERC20 public dai;
 
-  constructor(ERC20 _eth, ERC20 _dai) public {
+  constructor(ERC20 _eth, ERC20 _dai) {
     eth = _eth;
     dai = _dai;
   }
@@ -26,7 +24,7 @@ contract LiquidityPool {
   function getEthToDaiPrice() public view returns (uint256) {
     uint256 ethBalance = eth.balanceOf(address(this));
     uint256 daiBalance = dai.balanceOf(address(this));
-    return daiBalance.mul(1 ether).div(ethBalance);
+    return (daiBalance * (1 ether)) / ethBalance;
   }
 
   function exchange(ERC20 fromToken, uint256 fromAmount, ERC20 toToken) public {
@@ -34,20 +32,18 @@ contract LiquidityPool {
     require(toToken == eth || toToken == dai, "Invalid toToken.");
 
     uint256 fromTokenBalance = fromToken.balanceOf(address(this));
-    uint256 toTokenBalance = toToken.balanceOf(address(this));
+    // uint256 toTokenBalance = toToken.balanceOf(address(this));
     require(fromTokenBalance >= fromAmount, "Insufficient balance.");
 
     uint256 exchangeRate = getEthToDaiPrice();
     uint256 toAmount;
     if (fromToken == eth) {
-      toAmount = fromAmount.mul(exchangeRate).div(1 ether);
+        toAmount = fromAmount * exchangeRate / (1 ether);
     } else {
-      toAmount = fromAmount.mul(1 ether).div(exchangeRate);
+        toAmount = fromAmount * (1 ether) / (exchangeRate);
     }
 
-    fromToken.safeTransferFrom(msg.sender, address(this), fromAmount);
-    toToken.safeTransfer(msg.sender, toAmount);
+    fromToken.transferFrom(msg.sender, address(this), fromAmount);
+    toToken.transfer(msg.sender, toAmount);
   }
 }
-
-;
