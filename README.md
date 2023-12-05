@@ -40,8 +40,3 @@ Ces outils seront utilisés dans des workshops.
 - [Metamask: /!\ **metamask.io** /!\ ](https://metamask.io/) - Votre wallet, votre identité
 - [Remix: remix.ethereum.org](https://remix.ethereum.org) - Outil de développement solidity et déploiement en ligne
 - [Scaffold-eth: git:scaffold-eth](https://github.com/scaffold-eth/scaffold-eth) - Framework web3 (React + hardhat) - Voir [ici](./scaffold-eth/) pour un quick launch
-
-## Liste des workshops
-
-- [Workshop 1](./workshops/workshop1/) - Initiation Solidity & Smart Contracts
-- oui c'est un peu vide
