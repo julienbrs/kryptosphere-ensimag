@@ -8,9 +8,9 @@ contract LiquidityPool {
   ERC20 public eth;
   ERC20 public dai;
 
-  constructor(ERC20 _eth, ERC20 _dai) {
-    eth = _eth;
-    dai = _dai;
+  constructor(ERC20 _ethAddress, ERC20 _daiAddress) {
+    eth = _ethAddress;
+    dai = _daiAddress;
   }
 
   function deposit(ERC20 token, uint256 amount) public {
